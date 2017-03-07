@@ -1,0 +1,38 @@
+<ion-view view-title="Votre profil">
+  <ion-content>
+      <div class = "row">
+		   <div class = "col-sm-3" >
+		       <!--<img ng-src="{{issue.thumbnail_link}}" height="144px">-->
+		        <p>Id : </p>
+		        <p>Email :</p>
+		        <p>Name : </p>          
+		   </div>
+		   <div class = "col-sm-3" >
+		       <!--<img ng-src="{{issue.thumbnail_link}}" height="144px">-->
+		        <p>{{session.id}}</p>
+		        <p>{{session.email}}</p>
+		        <p>{{session.name}}</p>          
+		   </div>
+	  </div>
+      <div class = "row">
+		   <div class = "col-sm-3" ng-repeat="(key, issue) in issues track by $index" ng-if="issue.thumbnail_link != null">
+		       <img ng-src="{{issue.thumbnail_link}}" height="144px">
+		        <h2>{{issue.title}}</h2>
+		        <p>{{issue.describe}}</p>
+		        <p>{{issue.price}}   euro</p>
+		        <p>{{issue.date}}</p>
+		        <a href="#" ng-click="edit(value)" class="button button-light icon ion-edit"></a>
+			    <a href="#" ng-click="del(value)" class="button button-light icon ion-close"></a>          
+		   </div>
+	  </div>
+  </ion-content>
+  <div class="bar bar-footer bar-stable">
+	  <div class="row">
+	  	<a href="#" ng-click="add()" class="col button button-balanced ion-person-add">Ajouter</a>
+	  	<!-- <a href="#/visual" class="col button button-energized ion-pie-graph"> Visual</a>
+	  	<button class="col button button-royal icon-left ion-shuffle" ng-click="toggleReordering()">Reorder</button>-->
+  	</div>
+  </div>
+</ion-view>
+
+

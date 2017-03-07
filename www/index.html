@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geo Alert Info : Annonces autour de vous!</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+     <!--
+     <link rel="stylesheet" type="text/css" href="css/slick/slick.css">
+	 <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css">
+	 <style type="text/css">
+	    /*html, body {
+	      margin: 0;
+	      padding: 0;
+	    }*/
+
+	    * {
+	      box-sizing: border-box;
+	    }
+
+	    .slider {
+	        width: 50%;
+	        margin: 100px auto;
+	    }
+
+	    .slick-slide {
+	      margin: 0px 20px;
+	    }
+
+	    .slick-slide img {
+	      width: 100%;
+	    }
+
+	    .slick-prev:before,
+	    .slick-next:before {
+	        color: black;
+	    }
+	 </style>-->
+	 <link href="css/style.css" rel="stylesheet">
+
+
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular-ui/ui-bootstrap-tpls-0.12.0.js"></script>
+
+
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <!--
+    <script src="http://example.gajotres.net/include/angular-google-maps/angular-google-maps.min.js"></script>
+    <script src="http://example.gajotres.net/include/loadsh/lodash.min.js"></script>-->
+    <!-- google maps javascript -->
+    <script src="http://example.gajotres.net/include/angular-google-maps/angular-google-maps.min.js"></script>
+    <script src="lib/googlemap/markerclusterer.js"></script>
+    <script src="cordova.js"></script>
+
+	<!-- https://github.com/nesk/network.js -->
+	<script src="js/network/dist/network.min.js"></script>
+    <script src="js/prototype.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/appctrl.js"></script>
+    <script src="js/controllers/playlistctrl.js"></script>
+    <script src="js/controllers/playlistsctrl.js"></script>
+    <script src="js/controllers/itinerairectrl.js"></script>
+    <script src="js/controllers/dashboardctrl.js"></script>
+    <script src="js/controllers/mapctrl.js"></script>
+    <script src="js/factories/geolocation.js"></script>
+    <script src="js/factories/localstorage.js"></script>
+    <script src="js/factories/gmarker.js"></script>
+    <script src="js/services/fileupload.js"></script>
+    <script src="js/services/issue.js"></script>
+    <script src="js/services/rest.js"></script>
+	<script src="js/services/network.js"></script>
+    <script src="js/services/format.js"></script>
+    <script src="js/directives/filemodel.js"></script>
+    <script src="js/directives/slickslider.js"></script>
+    <script src="js/directives/summary.js"></script>
+    <script src="js/directives/detail.js"></script>
+
+
+
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view ></ion-nav-view>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmgsvbxQP-CEYdnFJFjAHTeIGbLLh-3ik"
+        async defer></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+	<!--<script src="css/slick/slick.js" type="text/javascript" charset="utf-8"></script>-->
+	
+  </body>
+</html>

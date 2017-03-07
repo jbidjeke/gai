@@ -1,0 +1,18 @@
+            <details>
+			    <summary>
+		        <img  ng-src="{{value.thumbnail_link}}" height="144px" ng-click="showMarker(key)" />
+		        <b class="uppercase">{{value.title}}</b>  <span ng-if="value.price" style="color:red"> Prix : {{value.price}}   euro</span>
+				</summary>
+			        {{value.describe}}<br/>
+			        {{value.date}}<br/>
+
+			        <a href="#" ng-click="showMarker(key)" class="button button-light icon ion-earth"></a>
+			        <!--<a href="#/app/playlists/{{key}}" class="button button-light icon ion-image"></a>-->
+			        <a href="#/app/playlist/{{key}}" class="button button-light icon ion-information"></a>
+			        <!--<a href="#{{key}}" class="button button-light icon ion-ios-email"></a>-->
+			        <!--
+					<span >
+			            <a href="#" ng-click="edit(value)" class="button button-light icon ion-edit"></a>
+			            <a href="#" ng-click="del(value)" class="button button-light icon ion-close"></a>
+			        </span>-->
+		    </details>

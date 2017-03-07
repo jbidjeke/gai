@@ -1,0 +1,58 @@
+/* Empty. Add your own CSS if you like */
+@media (min-width: 680px) {
+  .modal {
+    top: 0%; 
+  	right: 20%;
+    left: 25%;
+    min-height: 740px;
+  	width: 50%;
+  }
+  html, body {overflow: inline}
+}
+
+html, body { height: 100%; margin: 0; padding: 0; }
+#map { height: 100%; resize: both;
+    overflow: auto;}
+
+.scroll {
+  height: 100%;
+}
+
+.angular-google-map-container { 
+  height: 100%; 
+}
+
+.add, .admin, .logout {
+  background: #444444;
+}
+
+.add.item{
+  color: #f00;
+}
+
+.admin.item, .logout.item{
+  color: #fff;
+}
+
+.uppercase{
+  text-transform : uppercase;
+}
+
+
+.image {
+background-size: cover;
+width: 100%;
+height: 200px;
+float:left;
+}
+
+.image img {
+display: none;
+}
+
+ion-scroll {
+  height: 70%;
+  background: #fff;
+}
+
+

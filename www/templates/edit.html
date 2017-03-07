@@ -1,0 +1,62 @@
+
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Modifiez votre annonce</h1>
+    <div class="buttons">
+      <button class="button button-clear button-positive" ng-click="closeEdit()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content >
+    
+    <form ng-submit="doEdit()">
+    <!-- 
+        <label class="item item-input" >
+            <select id="oc_platformbundle_advert_categories"  ng-model="user.advert.categories" required >
+                <option ng-repeat="(key, category) in categories"   ng-value="category.id" >{{category.name}}</option>
+            </select>                                      
+        </label>-->
+        <label class="item item-input" >
+            <input type="text" id="oc_platformbundle_advert_price" ng-model="user.advert.price" size="12" placeholder="Prix *" ng-value="user.advert.price"  required="required"> 
+            <span style="color:red" class="glyphicon glyphicon-euro"></span>                                        
+        </label>
+        <label class="item item-input" >
+            <input type="text" id="oc_platformbundle_advert_title" ng-model="user.advert.title" placeholder="Titre *" ng-value="user.advert.title" required="required">                                        
+        </label>
+        <label class="item item-input" >
+            <input type="text" id="oc_platformbundle_advert_author" ng-model="user.advert.author" placeholder="Auteur ou Url *" ng-value="user.advert.author" required="required">                                         
+        </label>
+        <label class="item item-input" >
+            <input type="email" id="oc_platformbundle_advert_user_email" ng-model="user.advert.user.email" placeholder="Votre Email *" ng-value="user.advert.user.email" required="required">                                         
+        </label>
+        <label class="item item-input" >
+            <textarea id="oc_platformbundle_advert_content" ng-model="user.advert.content" placeholder="Detail *" ng-value="user.advert.content" required="required"></textarea>                                          
+        </label>
+        <label class="item item-input" >
+            <span class="input-label" ng-show="user.advert.categories=='Covoiturage'">Photo de votre vehicule</span>
+            <input type="file" id="oc_platformbundle_advert_image_file"  file-model="user.advert.image" accept="image/*"    capture   required>                          
+        </label>
+        <label class="item item-input" ng-show="user.advert.categories=='Covoiturage'">
+            <input type="text" id="oc_platformbundle_advert_itineraire_departure" ng-model="user.advert.itineraire.departure" ng-value="user.advert.itineraire.departure"  placeholder="Votre depart"   >                             
+        </label>
+        <label class="item item-input" ng-show="user.advert.categories=='Covoiturage'">
+            <input type="text" id="oc_platformbundle_advert_itineraire_arrival" ng-model="user.advert.itineraire.arrival" ng-value="user.advert.itineraire.arrival" placeholder="Votre destination"   >                             
+        </label>
+        <label class="item item-input" ng-show="user.advert.categories=='Covoiturage'">
+            <input type="date" id="oc_platformbundle_advert_itineraire_date" ng-model="user.advert.itineraire.date" placeholder="dd-MM-yyyy"   ng-value="user.advert.itineraire.date">
+        </label>
+        <label class="item item-input" ng-show="user.advert.categories=='Covoiturage'">
+            <input type="time" id="oc_platformbundle_advert_itineraire_time" ng-model="user.advert.itineraire.time" placeholder="HH:mm:ss"  ng-value="user.advert.itineraire.time">                          
+        </label>
+	    
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-model="user.advert.save">Publier</button>
+        </label>
+    </form>
+    <!-- 
+    <form ng-submit="doEdit()"><div id="oc_platformbundle_advert_edit"><div>                <label for="oc_platformbundle_advert_edit_price" class="required">Price</label><input type="text" id="oc_platformbundle_advert_edit_price" name="oc_platformbundle_advert_edit[price]" required="required" value="14,00" /> €</div><div>                <label for="oc_platformbundle_advert_edit_title" class="required">Title</label><input type="text" id="oc_platformbundle_advert_edit_title" name="oc_platformbundle_advert_edit[title]" required="required" value="test" /></div><div>                <label for="oc_platformbundle_advert_edit_author" class="required">Author</label><input type="text" id="oc_platformbundle_advert_edit_author" name="oc_platformbundle_advert_edit[author]" required="required" value="test" /></div><div>                <label class="required">User</label><div id="oc_platformbundle_advert_edit_user"><div>                <label for="oc_platformbundle_advert_edit_user_email" class="required">Email</label><input type="text" id="oc_platformbundle_advert_edit_user_email" name="oc_platformbundle_advert_edit[user][email]" required="required" value="jbidjeke@yahoo.fr" /></div></div></div><div>                <label for="oc_platformbundle_advert_edit_content" class="required">Content</label><textarea id="oc_platformbundle_advert_edit_content" name="oc_platformbundle_advert_edit[content]" required="required">test</textarea></div><div>                <label class="required">Image</label><div id="oc_platformbundle_advert_edit_image"><div>                <label for="oc_platformbundle_advert_edit_image_file" class="required">File</label><input type="file" id="oc_platformbundle_advert_edit_image_file" name="oc_platformbundle_advert_edit[image][file]" required="required" /></div></div></div><div><button type="submit" id="oc_platformbundle_advert_edit_save" name="oc_platformbundle_advert_edit[save]">Save</button></div></div></form>
+    -->
+    <center>Attention, il y aura une verification avant publication.</center>
+  </ion-content>
+
+</ion-modal-view>
+

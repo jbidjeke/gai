@@ -1,0 +1,46 @@
+<ion-view view-title="{{issue.title}}">
+  <ion-content>
+    <div class="list card">
+
+	  <div class="item item-avatar">
+	    <img ng-if="issue.icon" ng-src="{{issue.icon}}" >
+	    <h2 class="uppercase">{{issue.title}}</h2>
+        <p>
+	      <span ng-if="issue.price" style="color:red"> Prix : {{issue.price}}   euro</span><br/>
+	      {{issue.describe}}<br/>
+	      {{issue.date}}<br/>
+
+			        <!--<a href="#/app/playlists/{{key}}" class="button button-light icon ion-ios-email"></a>-->
+			        <!--<span >
+			           <a href="#/app/playlists/{{key}}" class="button button-light icon ion-edit"></a>
+			           <a href="#/app/playlists/{{key}}" class="button button-light icon ion-close"></a>
+			        </span>-->
+		</p>
+	  </div>
+
+	  <div class="item item-bodyz">
+	    <img height="100%"  ng-src="{{issue.thumbnail_link}}">
+	    <!--
+	    <p>
+	      <a href="#" class="subdued">1 Like</a>
+	      <a href="#" class="subdued">5 Comments</a>
+	    </p>
+	    -->
+	  </div>
+
+	</div>
+	<ion-scroll ng-show="averageSpeed >= 5000000">
+	   <div id="map" data-tap-disabled="true"></div>
+	</ion-scroll>
+  </ion-content>
+
+  <ion-tabs class="tabs-positive tabs-icon-top" ng-show="issue.departure">
+	  <ion-tab title="Itineraire" icon-on="ion-android-compass" icon-off="ion-android-compass" ng-click="itineraire(id)">
+	  </ion-tab>
+	  <!--
+	  <ion-tab title="Detail(avis)" icon-on="ion-information" icon-off="ion-information">
+
+	  </ion-tab>-->
+   </ion-tabs>
+
+</ion-view>

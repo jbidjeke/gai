@@ -1,0 +1,55 @@
+{
+  "name": "network-js",
+  "version": "2.1.0",
+  "description": "Make accurate network measures in JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nesk/network.js.git"
+  },
+  "keywords": [
+    "network",
+    "speedtest",
+    "speed",
+    "test",
+    "latency",
+    "bandwidth",
+    "connection"
+  ],
+  "author": "Johann Pardanaud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nesk/network.js/issues"
+  },
+  "homepage": "https://github.com/nesk/network.js",
+  "devDependencies": {
+    "babelify": "~6.1.2",
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "chai-spies": "^0.6.0",
+    "chalk": "^1.1.0",
+    "core-js": "^1.2.6",
+    "exorcist": "^0.4.0",
+    "gulp": "^3.9.0",
+    "gulp-bump": "^0.3.1",
+    "gulp-git": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "lodash.isboolean": "^3.0.1",
+    "lodash.isfunction": "^3.0.6",
+    "lodash.isplainobject": "^3.2.0",
+    "lodash.merge": "^3.3.2",
+    "mocha": "^2.2.5",
+    "mocha-phantomjs": "^3.5.3",
+    "npm": "^2.12.1",
+    "phantomjs": "1.9.1 - 1.9.7-15",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "yargs": "^3.15.0"
+  },
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp && echo '\\n' && gulp watch",
+    "test": "gulp; echo '\\n'; mocha-phantomjs test/test.html"
+  }
+}

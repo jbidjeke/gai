@@ -1,0 +1,17 @@
+<ion-view view-title="liste">
+  <ion-content>
+    <ion-list >
+      <ion-item  ng-repeat="(key, issue) in issues track by $index" href="#/app/playlist/{{key}}" ng-if="issue.thumbnail_link != null" class="item-thumbnail-left">
+        <img ng-src="{{issue.thumbnail_link}}">
+        <h2 class="uppercase">{{issue.title}}</h2>
+        <p>
+        <span ng-if="issue.price" style="color:red"> Prix : {{issue.price}}   euro</span><br/>
+        {{issue.date}}
+        </p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar class="bar-dark" ng-show="averageSpeed >= 5000000">
+      <a ng-click="map(category)" class="button button-icon icon ion-navigate">Carte</a>
+  </ion-footer-bar>
+</ion-view>

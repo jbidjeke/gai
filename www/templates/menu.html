@@ -1,0 +1,55 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu side="left">
+    <ion-header-bar align-title="center" class="bar bar-header bar-light">
+	<!--
+	  <div class="buttons">
+	    <button class="button" ng-click="">Mon compte</button>
+	  </div>-->
+	  <h1 class="title">Annonces autour de vous </h1>
+	  <!--
+	  <div class="buttons">
+	    <button class="button" ng-click="">Edit</button>
+	  </div>-->
+	</ion-header-bar>
+    <ion-content  has-tabs="true" >
+       <ion-list >
+              <ion-item  ng-click="add()" class="add" >
+		          PUBLIER UNE ANNONCE
+		      </ion-item>
+			  <ion-item ng-if="session != null"  ng-click="dashboard()"  class="admin" > 
+		          MON COMPTE
+		      </ion-item>
+		      <ion-item ng-if="session == null"  ng-click="login()"  class="admin" > 
+		          CONNEXION
+		      </ion-item>
+			  <ion-item ng-if="session != null"  ng-click="logout()"  class="logout" > 
+		          DECONNEXION
+		      </ion-item>
+	  </ion-list>
+      <ion-scroll>
+        <ion-item menu-close ng-repeat="(key, category) in categories" >
+          <a class="item-content"  href="#/app/playlists/{{category.url}}" >
+		         {{category.name}}
+		  </a>
+        </ion-item>
+      </ion-scroll>
+      <!-- <br/><br/><br/>
+      <p>Copyright © 2016 </p>-->
+    </ion-content>
+  </ion-side-menu>
+  
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" ></ion-nav-view>
+  </ion-side-menu-content>
+
+  
+</ion-side-menus>

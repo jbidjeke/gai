@@ -1,0 +1,61 @@
+
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Publiez annonce</h1>
+    <div class="buttons">
+      <button class="button button-clear button-positive" ng-click="closeAdd()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content >
+    
+    <form ng-submit="doAdd()">
+        <label class="item item-input" >
+            <select id="oc_platformbundle_advert_categories"  ng-model="user.advert.categories" required >
+                <!-- <optgroup label="Auto"><option value="15">Covoiturage</option><option value="2">Voitures</option><option value="3">Motos</option><option value="4">Nautisme</option></optgroup><option value="5">Ventes immobilieres</option><option value="6">Locations</option><option value="7">Colocations</option><option value="8">Locations de vacances</option><option value="9">Bureaux Commerces</option><option value="10">Maisons</option><option value="11">Loisirs</option><option value="12">Materiel Professionnel</option><option value="13">Emploi Services</option><option value="14">Media</option> -->
+                <option ng-repeat="(key, category) in categories"   ng-value="category.id" >{{category.name}}</option>
+            </select>                                      
+        </label>
+        <label class="item item-input" >
+            <input type="text" id="oc_platformbundle_advert_price" ng-model="user.advert.price" size="12" placeholder="Prix *"  required="required"> 
+            <span style="color:red" class="glyphicon glyphicon-euro"></span>                                        
+        </label>
+        <label class="item item-input" >
+            <input type="text" id="oc_platformbundle_advert_title" ng-model="user.advert.title" placeholder="Titre *" required="required">                                        
+        </label>
+        <label class="item item-input" >
+            <input type="text" id="oc_platformbundle_advert_author" ng-model="user.advert.author" placeholder="Auteur ou Url *" required="required">                                         
+        </label>
+        <label class="item item-input" >
+            <input type="email" id="oc_platformbundle_advert_user_email" ng-model="user.advert.user.email" placeholder="Votre Email *" required="required">                                         
+        </label>
+        <label class="item item-input" >
+            <textarea id="oc_platformbundle_advert_content" ng-model="user.advert.content" placeholder="Detail *" required="required"></textarea>                                          
+        </label>
+        <label class="item item-input" >
+            <span class="input-label" ng-show="user.advert.categories==15">Photo de votre vehicule</span>
+            <input type="file" id="oc_platformbundle_advert_image_file"  file-model="user.advert.image" accept="image/*"   capture required>                          
+        </label>  
+        <label class="item item-input" ng-show="user.advert.categories==15">
+            <input type="text" id="oc_platformbundle_advert_itineraire_departure" ng-model="user.advert.itineraire.departure" placeholder="Votre depart"   >                             
+        </label>
+        <label class="item item-input" ng-show="user.advert.categories==15">
+            <input type="text" id="oc_platformbundle_advert_itineraire_arrival" ng-model="user.advert.itineraire.arrival" placeholder="Votre destination"   >                             
+        </label>
+        <label class="item item-input" ng-show="user.advert.categories==15">
+            <input type="date" id="oc_platformbundle_advert_itineraire_date" ng-model="user.advert.itineraire.date" placeholder="dd-MM-yyyy"  >
+        </label>
+        <label class="item item-input" ng-show="user.advert.categories==15">
+            <input type="time" id="oc_platformbundle_advert_itineraire_time" ng-model="user.advert.itineraire.time" placeholder="HH:mm:ss"  >                          
+        </label>
+	    <label class="item item-input">
+            <input type="checkbox" id="oc_platformbundle_advert_published" ng-model="user.advert.published"  value="1" ng-show="false">                            
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit" ng-model="user.advert.save">Publier</button>
+        </label>
+    </form>
+    <center>Attention, il y aura une verification avant publication.</center>
+  </ion-content>
+
+</ion-modal-view>
+

@@ -1,0 +1,19 @@
+<!-- https://www.thepolyglotdeveloper.com/2015/03/make-a-gallery-like-image-grid-using-ionic-framework/  -->
+<ion-view view-title="liste">
+  <ion-content>
+	<div class="row">
+        <div class="col col-25" ng-repeat="(key, issue) in issues track by $index"  >
+		    <a href="#/app/playlist/{{key}}" >
+				<div class="image" style="background-image:url({{issues[$index].thumbnail_link}})"><img src="{{issues[$index].thumbnail_link}}" alt="" /></div>
+				<p><span class="uppercase">{{issues[$index].title}}</span><br/>
+				<span ng-if="issues[$index].price" style="color:red"> Prix : {{issues[$index].price}}   euro</span><br/>
+				{{issues[$index].date}}
+				</p>
+			</a>
+        </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar-dark" ng-show="averageSpeed >= 3000000">
+      <a ng-click="map(category)" class="button button-icon icon ion-navigate">Carte</a>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,42 @@
+<!-- https://www.thepolyglotdeveloper.com/2015/03/make-a-gallery-like-image-grid-using-ionic-framework/  -->
+<ion-view view-title="liste">
+  <ion-content>
+	<div class="row" ng-repeat="(key, issue) in issues track by $index" href="#/app/playlist/{{key}}" ng-if="$index % 4 === 0">
+        <div class="col col-25" ng-if="$index < issues.length">
+			<div class="image" style="background-image:url({{issues[$index].thumbnail_link}})"><img src="{{issues[$index].thumbnail_link}}" alt="" /></div>
+			<p class="uppercase">{{issues[$index].title}}</p>
+			<p>
+			<span ng-if="issues[$index].price" style="color:red"> Prix : {{issues[$index].price}}   euro</span><br/>
+			{{issues[$index].date}}
+			</p>
+        </div>
+        <div class="col col-25" ng-if="$index + 1 < issues.length">
+            <div class="image" style="background-image:url({{issues[$index + 1].thumbnail_link}})"><img src="{{issues[$index + 1].thumbnail_link}}" alt="" /></div>
+			<p class="uppercase">{{issues[$index + 1].title}}</p>
+			<p>
+			<span ng-if="issues[$index + 1].price" style="color:red"> Prix : {{issues[$index + 1].price}}   euro</span><br/>
+			{{issues[$index + 1].date}}
+			</p>
+        </div>
+        <div class="col col-25" ng-if="$index + 2 < issues.length">
+		   <div class="image" style="background-image:url({{issues[$index + 2].thumbnail_link}})"><img src="{{issues[$index + 2].thumbnail_link}}" alt="" /></div>			
+			<p class="uppercase">{{issues[$index + 2].title}}</p>
+			<p>
+			<span ng-if="issues[$index + 2].price" style="color:red"> Prix : {{issues[$index + 2].price}}   euro</span><br/>
+			{{issues[$index + 2].date}}
+			</p>
+        </div>
+        <div class="col col-25" ng-if="$index + 3 < issues.length">
+            <div class="image" style="background-image:url({{issues[$index + 3].thumbnail_link}})"><img src="{{issues[$index + 3].thumbnail_link}}" alt="" /></div>
+			<p class="uppercase">{{issues[$index + 3].title}}</p>
+			<p>
+			<span ng-if="issues[$index + 3].price" style="color:red"> Prix : {{issues[$index + 3].price}}   euro</span><br/>
+			{{issues[$index + 3].date}}
+			</p>
+        </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar-dark">
+      <a ng-show="averageSpeed >= 300000" ng-click="map(category)" class="button button-icon icon ion-navigate">Carte</a>
+  </ion-footer-bar>
+</ion-view>
