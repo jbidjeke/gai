@@ -1,4 +1,4 @@
 # gai
-# AngularJS MVC Architecture
+# AngularJS MVVM Architecture
 
 
